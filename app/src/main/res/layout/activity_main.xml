@@ -180,35 +180,35 @@
     <TextView
         android:id="@+id/terminal_title"
         style="@style/small_black"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="@string/terminal_title"
-        app:layout_constraintStart_toStartOf="@+id/gate_info_title"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@id/gate_info_title"
+        app:layout_constraintStart_toStartOf="@+id/gate_info_title"
         app:layout_constraintTop_toTopOf="@+id/gate_info_title" />
 
     <TextView
         android:id="@+id/gate_title"
         style="@style/small_black"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="@string/gate_title"
-        app:layout_constraintStart_toStartOf="@id/gate_info_title"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@id/gate_info_title"
         app:layout_constraintEnd_toEndOf="@+id/gate_info_title"
+        app:layout_constraintStart_toStartOf="@id/gate_info_title"
         app:layout_constraintTop_toTopOf="@+id/gate_info_title" />
 
     <TextView
         android:id="@+id/seat_title"
         style="@style/small_black"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="@string/seat_title"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@id/gate_info_title"
         app:layout_constraintEnd_toEndOf="@+id/gate_info_title"
         app:layout_constraintTop_toTopOf="@+id/gate_info_title" />
@@ -225,10 +225,10 @@
     <TextView
         android:id="@+id/terminal"
         style="@style/big_white"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:text="@string/terminal"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/gate_info"
         app:layout_constraintStart_toStartOf="@+id/gate_info"
         app:layout_constraintTop_toTopOf="@+id/gate_info" />
@@ -236,10 +236,11 @@
     <TextView
         android:id="@+id/seat"
         style="@style/big_white"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="@string/seat"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/gate_info"
         app:layout_constraintEnd_toEndOf="@+id/gate_info"
         app:layout_constraintTop_toTopOf="@+id/gate_info" />
@@ -247,15 +248,16 @@
     <TextView
         android:id="@+id/gate"
         style="@style/big_white"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/gate"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/gate_info"
-        app:layout_constraintEnd_toEndOf="@+id/gate_info"
-        app:layout_constraintStart_toStartOf="@+id/terminal"
+        app:layout_constraintEnd_toStartOf="@+id/seat"
+        app:layout_constraintStart_toEndOf="@+id/terminal"
         app:layout_constraintTop_toBottomOf="@+id/gate_info_title" />
 
     <!--DONE 11. Place a ImageView with the qr-code image in the middle under
