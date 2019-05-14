@@ -4,36 +4,277 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/big_padding"
     tools:context=".MainActivity">
 
-    <!--TODO 1. Give the ConstraintLayout a padding od @dimen/big_padding -->
-    <!--TODO 2. Make a Passenger Title TextView (Style->titles, String->passenger_title)
+    <!--DONE 1. Give the ConstraintLayout a padding od @dimen/small_padding -->
+    <!--DONE 2. Make a Passenger Title TextView (Style->titles, String->passenger_title)
         and place it in the upper left corner-->
 
-    <!--TODO 3. Make a Passenger Name TextView (Style->big_blue, String->passenger_name) and place it under
+
+    <TextView
+        android:id="@+id/passTitle"
+        style="@style/titles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/passenger_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--DONE 3. Make a Passenger Name TextView (Style->big_blue, String->passenger_name) and place it under
         the title -->
 
-    <!--TODO 4. Make a ImageView with the departure airport and place it to the left under the passenger name
+    <TextView
+        android:id="@+id/passName"
+        style="@style/big_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/passenger_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passTitle" />
+
+    <!--DONE 4. Make a ImageView with the departure airport and place it to the left under the passenger name
         (Src->gru, marginLeft->16dp, marginTop->24dp, width/height->80dp)-->
 
-    <!--TODO 5. Make a ImageView with the arrival airport and place it to the right under the passenger name
+    <ImageView
+        android:id="@+id/dep_airport"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passName"
+        app:srcCompat="@drawable/gru" />
+
+    <!--DONE 5. Make a ImageView with the arrival airport and place it to the right under the passenger name
         (Src->jfk, marginRight->16dp, marginTop->24dp, width/height->80dp)-->
 
-    <!--TODO 6. Make a View of 1dp height and blue background to connect the two ImageViews-->
+    <ImageView
+        android:id="@+id/arrival_airport"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passName"
+        app:srcCompat="@drawable/jfk" />
 
-    <!--TODO 7. Place the airplane img (Width 100dp/ Height 50dp)above the line and in the middle of the two ImageViews -->
+    <!--DONE 6. Make a View of 1dp height and blue background to connect the two ImageViews-->
 
-    <!--TODO 8. Make 8 new TextViews with information about the flight like boarding time, minutes to boarding,
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toTopOf="@+id/arrival_airport"
+        app:layout_constraintEnd_toStartOf="@+id/arrival_airport"
+        app:layout_constraintStart_toEndOf="@+id/dep_airport"
+        app:layout_constraintTop_toBottomOf="@+id/arrival_airport" />
+
+    <!--DONE 7. Place the airplane img (Width 100dp/ Height 50dp)above the line and in the middle of the two ImageViews -->
+
+    <ImageView
+        android:id="@+id/plane"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:srcCompat="@drawable/airplane" />
+
+    <!--DONE 8. Make 8 new TextViews with information about the flight like boarding time, minutes to boarding,
         departure time and arrival time. Use styles titles, big_grey, big_orange-and middle_green -->
 
-    <!--TODO 9. Make a light_blue view wit the height of 40dp and
+    <TextView
+        style="@style/titles"
+        android:id="@+id/boarding_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/boarding_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dep_airport" />
+
+    <TextView
+        style="@style/titles"
+        android:id="@+id/boarding_in_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/boarding_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrival_airport" />
+
+    <TextView
+        style="@style/big_gey"
+        android:id="@+id/boarding_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boarding_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boarding_title" />
+
+    <TextView
+        android:id="@+id/boarding_in_time"
+        style="@style/big_orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/boarding_in_time"
+        app:layout_constraintStart_toStartOf="@+id/boarding_in_title"
+        app:layout_constraintTop_toBottomOf="@+id/boarding_in_title" />
+
+    <TextView
+        android:id="@+id/departure_time_title"
+        style="@style/titles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dep_time_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boarding_time" />
+
+    <TextView
+        android:id="@+id/arrival_time_title"
+        style="@style/titles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/arr_time_title"
+        app:layout_constraintStart_toStartOf="@+id/boarding_in_time"
+        app:layout_constraintTop_toBottomOf="@+id/boarding_in_time" />
+
+    <TextView
+        android:id="@+id/departure_time"
+        style="@style/middle_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dep_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/departure_time_title" />
+
+    <TextView
+        android:id="@+id/arrival_time"
+        style="@style/middle_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/arr_time"
+        app:layout_constraintStart_toStartOf="@+id/arrival_time_title"
+        app:layout_constraintTop_toBottomOf="@+id/arrival_time_title" />
+
+    <!--DONE 9. Make a light_blue view wit the height of 40dp and
         a dark_blue View with a height of 60dp. They should take full width and be attached-->
 
-    <!--TODO 10. Place 6 TextViews inside the Views with information about Terminal, Gate and Seat.
+    <!--DONE 10. Place 6 TextViews inside the Views with information about Terminal, Gate and Seat.
         Use Styles small_clack and big_white-->
 
-    <!--TODO 11. Place a ImageView with the qr-code image in the middle under
+    <View
+        android:id="@+id/gate_info_title"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/departure_time" />
+
+    <TextView
+        android:id="@+id/terminal_title"
+        style="@style/small_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/terminal_title"
+        app:layout_constraintStart_toStartOf="@+id/gate_info_title"
+        app:layout_constraintBottom_toBottomOf="@id/gate_info_title"
+        app:layout_constraintTop_toTopOf="@+id/gate_info_title" />
+
+    <TextView
+        android:id="@+id/gate_title"
+        style="@style/small_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/gate_title"
+        app:layout_constraintStart_toStartOf="@id/gate_info_title"
+        app:layout_constraintBottom_toBottomOf="@id/gate_info_title"
+        app:layout_constraintEnd_toEndOf="@+id/gate_info_title"
+        app:layout_constraintTop_toTopOf="@+id/gate_info_title" />
+
+    <TextView
+        android:id="@+id/seat_title"
+        style="@style/small_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/seat_title"
+        app:layout_constraintBottom_toBottomOf="@id/gate_info_title"
+        app:layout_constraintEnd_toEndOf="@+id/gate_info_title"
+        app:layout_constraintTop_toTopOf="@+id/gate_info_title" />
+
+    <View
+        android:id="@+id/gate_info"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gate_info_title" />
+
+    <TextView
+        android:id="@+id/terminal"
+        style="@style/big_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/terminal"
+        app:layout_constraintBottom_toBottomOf="@+id/gate_info"
+        app:layout_constraintStart_toStartOf="@+id/gate_info"
+        app:layout_constraintTop_toTopOf="@+id/gate_info" />
+
+    <TextView
+        android:id="@+id/seat"
+        style="@style/big_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/seat"
+        app:layout_constraintBottom_toBottomOf="@+id/gate_info"
+        app:layout_constraintEnd_toEndOf="@+id/gate_info"
+        app:layout_constraintTop_toTopOf="@+id/gate_info" />
+
+    <TextView
+        android:id="@+id/gate"
+        style="@style/big_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/gate"
+        app:layout_constraintBottom_toBottomOf="@+id/gate_info"
+        app:layout_constraintEnd_toEndOf="@+id/gate_info"
+        app:layout_constraintStart_toStartOf="@+id/terminal"
+        app:layout_constraintTop_toBottomOf="@+id/gate_info_title" />
+
+    <!--DONE 11. Place a ImageView with the qr-code image in the middle under
         the dark_blue View-->
+
+    <ImageView
+        android:id="@+id/qr_code"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gate"
+        app:srcCompat="@drawable/qr_code" />
+
+
+
 
 
 </android.support.constraint.ConstraintLayout>
