@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="titles">
+        <item name="android:textSize">@dimen/small_text</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:padding">@dimen/small_padding</item>
+    </style>
+
+    <style name="big_blue">
+        <item name="android:textSize">@dimen/big_text</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:padding">@dimen/small_padding</item>
+    </style>
+
+    <style name="big_gey">
+        <item name="android:textSize">@dimen/big_text</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:padding">@dimen/small_padding</item>
+    </style>
+
+    <style name="big_white">
+        <item name="android:textSize">@dimen/big_text</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">@dimen/xs_padding</item>
+    </style>
+
+    <style name="big_orange">
+        <item name="android:textSize">@dimen/big_text</item>
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:padding">@dimen/small_padding</item>
+    </style>
+
+    <style name="middle_green">
+        <item name="android:textSize">@dimen/middle_text</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:padding">@dimen/small_padding</item>
+    </style>
+
+    <style name="small_black">
+        <item name="android:textSize">@dimen/xs_text</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">@dimen/xs_padding</item>
+    </style>
+
+</resources>

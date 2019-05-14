@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ConstraintLayout</string>
+
+    <string name="passenger_title">Passenger</string>
+    <string name="passenger_name">Eddard Stark</string>
+    <string name="boarding_title">Boarding Time</string>
+    <string name="boarding_in">Boarding In</string>
+    <string name="boarding_time">2:15 PM</string>
+    <string name="boarding_in_time">0:30</string>
+    <string name="dep_time_title">Departure Time</string>
+    <string name="arr_time_title">Arrival Time</string>
+    <string name="dep_time">2:45 PM</string>
+    <string name="arr_time">11:20 PM</string>
+    <string name="terminal_title">TERMINAL</string>
+    <string name="terminal">3</string>
+    <string name="gate_title">GATE</string>
+    <string name="gate">12A</string>
+    <string name="seat_title">SEAT</string>
+    <string name="seat">32D</string>
+</resources>

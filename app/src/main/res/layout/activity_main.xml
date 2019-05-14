@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--TODO 1. Give the ConstraintLayout a padding od @dimen/big_padding -->
+    <!--TODO 2. Make a Passenger Title TextView (Style->titles, String->passenger_title)
+        and place it in the upper left corner-->
+
+    <!--TODO 3. Make a Passenger Name TextView (Style->big_blue, String->passenger_name) and place it under
+        the title -->
+
+    <!--TODO 4. Make a ImageView with the departure airport and place it to the left under the passenger name
+        (Src->gru, marginLeft->16dp, marginTop->24dp, width/height->80dp)-->
+
+    <!--TODO 5. Make a ImageView with the arrival airport and place it to the right under the passenger name
+        (Src->jfk, marginRight->16dp, marginTop->24dp, width/height->80dp)-->
+
+    <!--TODO 6. Make a View of 1dp height and blue background to connect the two ImageViews-->
+
+    <!--TODO 7. Place the airplane img (Width 100dp/ Height 50dp)above the line and in the middle of the two ImageViews -->
+
+    <!--TODO 8. Make 8 new TextViews with information about the flight like boarding time, minutes to boarding,
+        departure time and arrival time. Use styles titles, big_grey, big_orange-and middle_green -->
+
+    <!--TODO 9. Make a light_blue view wit the height of 40dp and
+        a dark_blue View with a height of 60dp. They should take full width and be attached-->
+
+    <!--TODO 10. Place 6 TextViews inside the Views with information about Terminal, Gate and Seat.
+        Use Styles small_clack and big_white-->
+
+    <!--TODO 11. Place a ImageView with the qr-code image in the middle under
+        the dark_blue View-->
+
+
+</android.support.constraint.ConstraintLayout>
